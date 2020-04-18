@@ -1,5 +1,6 @@
 from __future__ import print_function
 import httplib2
+import json
 import pickle
 import os.path
 from apiclient import discovery
@@ -44,9 +45,20 @@ service = discovery.build('gmail', 'v1', credentials=creds)
 
 import send_email
 
+with open('Birthday.json') as f:
+  data = json.load(f)
+  email = data["email"]
+  email_address_other = data["emailother"]
+  recipient = email + "," + email_address_other
+  name = data["name"]
+  subject = "Happy Birthday " + name + "!"
+
+body = open('File.html')
+emailbody = body.read()
+
 sendInst = send_email.send_email(service)
 '''
 message = sendInst.create_message_with_attachment('Sender_Name <Sender_Email_address>','Recipient_Email_Address_1,Recipient_Email_Address_2','Subject','Email_Body', 'Email_Attachment_File_Name' )
 '''
-message = sendInst.create_message('Sender_Name <Sender_Email_address>','Recipient_Email_Address_1,Recipient_Email_Address_2','Subject','Email_Body' )
+message = sendInst.create_message('Sender_Name <Sender_Email_address>', recipient, subject, emailbody)
 sendInst.send_message('me',message)
