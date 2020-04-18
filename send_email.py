@@ -24,11 +24,14 @@ class send_email:
     def __init__(self,service):
         self.service = service
     def create_message(self,sender, to, subject, message_text):
+      '''
       message = MIMEText(message_text)
+      '''
+      message = MIMEText(message_text,'html')
       message['to'] = to
       message['from'] = sender
       message['subject'] = subject
-      return {'raw': base64.urlsafe_b64encode(message.as_bytes())}
+      return {'raw': base64.urlsafe_b64encode(message.as_string())}
 
     def create_message_with_attachment(self,
         sender, to, subject, message_text, file):
