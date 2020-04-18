@@ -45,5 +45,8 @@ service = discovery.build('gmail', 'v1', credentials=creds)
 import send_email
 
 sendInst = send_email.send_email(service)
+'''
 message = sendInst.create_message_with_attachment('Sender_Name <Sender_Email_address>','Recipient_Email_Address_1,Recipient_Email_Address_2','Subject','Email_Body', 'Email_Attachment_File_Name' )
+'''
+message = sendInst.create_message('Sender_Name <Sender_Email_address>','Recipient_Email_Address_1,Recipient_Email_Address_2','Subject','Email_Body' )
 sendInst.send_message('me',message)
