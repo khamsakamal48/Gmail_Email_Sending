@@ -11,7 +11,7 @@ Place the **credentials.json** file into your project folder.
 You need to install below pip packages to run this program. Use **sudo -H** while installing these packages if you face permission errors.
 
 ```bash
-pip3 install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib apiclient oauth2client
+pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib apiclient oauth2client
 ```
 
 ## Usage
@@ -19,8 +19,6 @@ pip3 install --upgrade google-api-python-client google-auth-httplib2 google-auth
 
 ```python3
 #It will ask for Google Account Authentication. Allow it to download the token credentials
-quickstart.py
-
 #Modify your email's recipient, subject and body details in main.py before running this command
 main.py
 ```
