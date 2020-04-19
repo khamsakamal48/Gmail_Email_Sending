@@ -3,7 +3,7 @@ import httplib2
 import json
 import pickle
 import os.path
-from apiclient import discovery
+from googleapiclient import discovery
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
