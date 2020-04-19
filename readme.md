@@ -29,5 +29,5 @@ Currently I have made the program to read details from a JSON file. Modify it in
 
 The email body content is copied from File.html
 
-## Credits
+## Acknowledgements
 [Google (Gmail)](https://mail.google.com) and [HowToFAQ](https://youtu.be/YVgj9ngUlaY)
