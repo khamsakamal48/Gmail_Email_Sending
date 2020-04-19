@@ -27,5 +27,7 @@ main.py
 
 Currently I have made the program to read details from a JSON file. Modify it in main.py as per your wish.
 
+The email body content is copied from File.html
+
 ## Credits
 [Google (Gmail)](https://mail.google.com) and [HowToFAQ](https://youtu.be/YVgj9ngUlaY)
