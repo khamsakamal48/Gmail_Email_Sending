@@ -45,7 +45,7 @@ service = discovery.build('gmail', 'v1', credentials=creds)
 
 import send_email
 
-with open('Birthday.json') as f:
+with open('File.json') as f:
   data = json.load(f)
   email = data["email"]
   email_address_other = data["emailother"]
